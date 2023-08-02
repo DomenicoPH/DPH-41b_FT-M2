@@ -1,13 +1,3 @@
-.imagen {
-  border-radius: 25px;
-  width: 100%;
-}
-.boton {
-  display: inline-block;
-  background-color: #22283A;
-  border-radius: 8px;
-  font-size: 2rem;
-}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -191,20 +181,6 @@ nav ul {
   justify-content: space-around;
   margin: 10px;
   width: 50%;
-  font-size: medium;
-  text-align: center;
-  font-family: #454A59;
-}
-@media (max-width: 500px) {
-  nav ul {
-    font-size: 1.1rem;
-    margin: 5px;
-    width: 80%;
-  }
-}
-nav a {
-  text-decoration: none;
-  color: #454A59;
 }
 footer {
   color: #22283B;
@@ -222,17 +198,6 @@ footer {
 .home .intro p {
   padding: 0 15px;
 }
-.home .intro img {
-  border-radius: 25px;
-  width: 100%;
-}
-@media (max-width: 500px) {
-  .home .intro img {
-    border-radius: 15px;
-    padding: 10px;
-    margin: auto;
-  }
-}
 .home .music-images {
   display: flex;
   flex-wrap: wrap;
@@ -243,15 +208,6 @@ footer {
   margin: 20px 2.5%;
   border-radius: 20px;
   height: 100%;
-}
-@media (max-width: 500px) {
-  .home .music-images .ondas,
-  .home .music-images .tecnologia {
-    display: none;
-  }
-  .home .music-images .auricular {
-    width: 100%;
-  }
 }
 .home .musica-nueva {
   padding: 15px;
@@ -269,67 +225,21 @@ footer {
   display: flex;
   justify-content: center;
 }
-@media (max-width: 500px) {
-  .home .actual {
-    padding: 15px 5px;
-  }
-}
 .home .actual .actual-text {
   width: 50%;
-  align-items: center;
-}
-@media (max-width: 500px) {
-  .home .actual .actual-text {
-    padding: 15px 5px;
-    margin-right: 25px;
-    width: 100%;
-    align-items: center;
-  }
 }
 .home .actual .actual-text h3 {
   margin-bottom: 10px;
 }
 .home .actual .actual-text p {
   margin-bottom: 26px;
-  text-align: justify;
-}
-.home .actual .actual-text .btn {
-  display: inline-block;
-  background-color: #22283A;
-  border-radius: 8px;
-  font-size: 2rem;
-  color: #F1F1F1;
-  padding: 15px;
-}
-@media (max-width: 500px) {
-  .home .actual .actual-text .btn {
-    width: 100%;
-    text-align: center;
-  }
-}
-.home .actual .actual-text .btn:hover {
-  background-color: #81848E;
-  color: #22283A;
-  cursor: pointer;
 }
 .home .actual .actual-img {
   width: 46%;
   margin-left: 4%;
 }
-@media (max-width: 500px) {
-  .home .actual .actual-img {
-    width: 100%;
-    margin-left: 0;
-    padding-bottom: 20px;
-  }
-}
 .home .actual .actual-img img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-}
-@media (max-width: 500px) {
-  .home .actual {
-    flex-direction: column-reverse;
-  }
 }
