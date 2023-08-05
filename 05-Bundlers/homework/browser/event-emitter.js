@@ -1,5 +1,6 @@
-(function () {
-  window.EventEmitter = EventEmitter;
+
+  //window.EventEmitter = EventEmitter;   ---> No se crea como propiedad del objeto window -> se exporta (última linea)
+
 
   // our EventEmitter constructor function
   function EventEmitter() {
@@ -37,4 +38,6 @@
       listener.apply(null, remainingArgs);
     });
   };
-})();
+
+
+  module.exports = EventEmitter

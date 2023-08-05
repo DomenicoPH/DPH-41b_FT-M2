@@ -1,5 +1,7 @@
-(function () {
-  window.whiteboard = new window.EventEmitter();
+
+  //window.whiteboard = new window.EventEmitter();   ---> No se crea como propiedad del objeto window -> se exporta (última linea)
+  const EventEmitter = require('./event-emitter')
+  var whiteboard = new EventEmitter()
 
   // Ultimately, the color of our stroke;
   var color;
@@ -106,4 +108,5 @@
       whiteboard.emit("draw", start, end, strokeColor);
     }
   };
-})();
+
+  module.exports = whiteboard;
