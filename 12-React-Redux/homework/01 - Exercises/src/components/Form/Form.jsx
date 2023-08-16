@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import Caja from '../../assets/caja.png';
 import './form.css';
+import { addProduct } from '../../redux/actions/actions';
 
 class Form extends React.Component{
    constructor(props){
@@ -14,13 +15,20 @@ class Form extends React.Component{
       }
    }
 
+   //funciones ( => ) se hacen con la sintaxis de flecha para que queden 'bindeados' automáticamente al constructor
+
    handleInputChange = (event) => {
       this.setState({ ...this.state, [event.target.name]: event.target.value });
    }
 
+   handleSubmit = (event) => {
+      event.preventDefault()
+      this.props.addProduct({...this.state, id: Date.now()})
+   }
+
    render(){
       return (
-         <form className='formBg'>
+         <form onSubmit={this.handleSubmit} className='formBg'>
             <div className='inputBox'>
                <label>Nombre: </label>
                <input
@@ -38,13 +46,21 @@ class Form extends React.Component{
                   value={this.state.price}
                />
             </div>
-            <button className='formBtn'>¡ADD!</button>
+            <button type='submit' className='formBtn'>¡ADD!</button>
             <img src={Caja} alt='' className='logo' />
          </form>
       )
    }
 }
 
-export function mapDispatchToProps() {}
+console.log(Date.now())
+
+export function mapDispatchToProps(dispatch) {
+   return {
+      addProduct: (product) => {
+         dispatch(addProduct(product))
+      }
+   }
+}
 
 export default connect(null, mapDispatchToProps)(Form);
